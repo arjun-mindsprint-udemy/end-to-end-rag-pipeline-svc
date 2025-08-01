@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: end-to-end-rag-pipeline-svc
+  description: Microservice for end-to-end-rag-pipeline-svc
+  annotations:
+    github.com/project-slug: arjun-mindsprint-udemy/end-to-end-rag-pipeline-svc
+    backstage.io/techdocs-ref: dir:.
+    jenkins.io/job-full-name: node-app-test-folder/arjun-mindsprint-udemy-repos/end-to-end-rag-pipeline-svc
+    grafana/dashboard-selector: "(tags @> 'my-service' || tags @> 'my-service-slo') && tags @> 'generated'"
+    prometheus.io/alert: all
+    prometheus.io/rule: sum(increase(http_request_total[5m])), memUsage|component,node_memory_active_bytes|instance,sum by (instance) (node_cpu_seconds_total)
+spec:
+  type: service
+  owner: development
+  lifecycle: experimental
+  providesApis:
+    - end-to-end-rag-pipeline-svc-api
