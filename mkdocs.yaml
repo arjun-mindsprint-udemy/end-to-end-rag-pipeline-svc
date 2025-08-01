@@ -1,0 +1,15 @@
+site_name: 'end-to-end-rag-pipeline-svc'
+site_description: 'Main documentation for the end-to-end-rag-pipeline-svc'
+repo_url: https://github.com/arjun-mindsprint-udemy/end-to-end-rag-pipeline-svc
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+  - redirects:
+      redirect_maps:
+        'index.md': 'overview/what-is-backstage.md'
+
+# For sidebar navigation on https://backstage.io/, see `microsite/sidebars.js`
+nav:
+  - Overview:
+      - What is Backstage?: 'docs/index.md'
