@@ -45,7 +45,7 @@
                 }
             }
         },
-                "/query": {
+        "/query": {
             "get": {
                 "summary": "Query API",
                 "responses": {
@@ -55,7 +55,7 @@
                 }
             }
         },
-                        "/llm": {
+        "/llm": {
             "get": {
                 "summary": "LLM API",
                 "responses": {
